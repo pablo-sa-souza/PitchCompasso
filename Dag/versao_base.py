@@ -66,21 +66,21 @@ df['zipcodeOri'] = df['zipcodeOri'].astype('int32')
 
 df['zipMerchant'] = df['zipMerchant'].astype('int32')
 
-db_data = 'mysql+mysqldb://' + 'root' + ':' + 'alcool666' + '@' + '172.21.48.1' + ':3306/' \
+db_data = 'mysql+mysqldb://' + 'root' + ':' + 'root' + '@' + '172.21.48.1' + ':3306/' \
        + 'db' + '?charset=utf8mb4'
 engine = create_engine(db_data)
 
-db_data2 = 'mysql+mysqldb://' + 'root' + ':' + 'alcool666' + '@' + '172.21.48.1' + ':3306/' + 'analytic'
+db_data2 = 'mysql+mysqldb://' + 'root' + ':' + 'root' + '@' + '172.21.48.1' + ':3306/' + 'analytic'
 engine = create_engine(db_data2)
 
 connection = pymysql.connect(host='localhost',
                          user='root',
-                         password='alcool666',
+                         password='root',
                          db='db')
 
 connection2 = pymysql.connect(host='localhost',
                          user='root',
-                         password='alcool666',
+                         password='root',
                          db='analytic')
 
 cursor=connection.cursor()
